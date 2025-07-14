@@ -1,0 +1,117 @@
+
+%border-active {
+    border: 1px solid var(--priority-dark-color)
+};
+$border-no-active: 1px soled #909090;
+$max-width-size: 1600px;
+
+%box-parrent{
+  min-height: 100vh;
+  display: inline-block;
+  min-width: 320px;
+  max-width: $max-width-size;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+%font-basis{
+  font-family: 'Myriad Pro', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.2;
+  line-height: 3;
+  color: var(--font-basis-color-lite);
+}
+/* BASIS */
+html {
+    @extend %font-basis;
+    background-color: var(--bg-body-color);
+}
+body,
+div#body {
+  background-color: var(--bg-body-color);
+}
+
+p,
+span,
+label,
+button,
+textarea.form-control,
+textarea.form-control:focus,
+a:not([href]):not([class]),
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="checkbox"],
+select {
+  @extend %font-basis;
+  color: var(--bs-body-color);
+}
+label,
+button,
+textarea.form-control,
+textarea.form-control:focus,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="checkbox"],
+select
+{
+    background-color: var(--bg-dashboard-color );
+}
+
+a {
+  @extend %font-basis;
+}
+h1{
+  @extend %font-basis;
+  font-size: 1.875em;
+  
+}
+/* BODY */
+body{
+  padding: 0;
+  margin: 0;
+}
+#body{
+
+}
+#root {
+  @extend %box-parrent;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 94px auto 200px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+/* log / logotip */
+    .log, 
+    .log a,
+     .register_forrm .log,
+     .register_forrm{
+        font-size: 1.1em; 
+        span{
+            color: var(--priority-lite-color);
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+    }
+
+
+:root,
+[dark-theme]{
+    --bg-body-color: #141414;
+    --bg-dashboard-color: #222222;
+    --priority-dark-color: #b5e3ff;
+    --priority-lite-color: #b5e3ff;
+    --font-basis-color-lite: #ebf7ff;
+    --basis-color-dark: #909090;
+
+}

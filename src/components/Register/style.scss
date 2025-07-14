@@ -1,0 +1,67 @@
+section.form{
+    width: inherit;
+    padding-top: 80px;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.register_forrm a.btn.btn-ghost.text-xl {
+    background: url("pictures/logo_small.png") no-repeat  center / 40px 51px;
+    background-position: 0, 0;
+    min-height: inherit;
+    border: none;
+    padding-left: 48px;
+}
+
+.register_forrm {
+    display: inline-block;
+    margin: 0 auto;
+    min-width: 318px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.form {
+    fieldset {
+        border: 1px solid var(--basis-color-dark);
+    }
+    label{
+        padding-bottom: 8px;
+        >span  {
+            font-size: 0.5em;
+            text-transform: initial;
+            display: none;
+        }
+    }
+    button {
+        border: 0;
+        background-color: var(--priority-dark-color);
+        color: var(--bg-dashboard-color);
+    }
+
+
+}
+
+.confirmation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    margin: 0 auto;
+    input.checkbox {
+        border: 1px solid var(--priority-dark-color);
+        display: inline-block;
+    }
+    input.checkbox:before {
+        border: 0;
+    }
+     a.text-center {
+        display: inline-block;
+        line-height: 1;
+        font-size: 0.9em;
+        text-align: left;
+        padding-left: 11px;
+    }
+}
