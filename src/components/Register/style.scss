@@ -17,14 +17,23 @@ section.form{
 .register_forrm {
     display: inline-block;
     margin: 0 auto;
-    min-width: 318px;
+    min-width: 450px;
     width: 100%;
     max-width: 350px;
+    border: 1px solid var(--basis-color-dark);
+    border-radius: 15px;
+    background-color: rgb(144, 144, 144, 0.1);
 }
 
 .form {
     fieldset {
         border: 1px solid var(--basis-color-dark);
+        margin: 0 auto;
+        
+    }
+    fieldset.fieldset{
+        background: none;
+        border: 0;
     }
     label{
         padding-bottom: 8px;

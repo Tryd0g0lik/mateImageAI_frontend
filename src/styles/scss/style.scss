@@ -66,6 +66,10 @@ select
 
 a {
   @extend %font-basis;
+  cursor: pointer;
+}
+#root li a.active{
+    color: var(--priority-dark-color);
 }
 h1{
   @extend %font-basis;
@@ -91,19 +95,74 @@ body{
   padding-top: 20px;
 }
 
+/* LOG / LOGOTIP */
+.log, 
+.log a,
+    .register_forrm .log,
+    .register_forrm{
+    font-size: 1.1em; 
+    span{
+        color: var(--priority-lite-color);
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+}
+
+/* NAVBAR and FOOTER*/
+.navbar,
+footer{
+    display: grid;
+    grid-template-columns: auto 275px;
+    grid-template-rows: 1fr;
+    border-radius: 15px;
+}
+.navbar .navbar-center,
+footer .navbar-center {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 1fr;
+    
+}
+.navbar-start{
+    display: none;
+}
+
 /* log / logotip */
-    .log, 
-    .log a,
-     .register_forrm .log,
-     .register_forrm{
-        font-size: 1.1em; 
-        span{
-            color: var(--priority-lite-color);
-            font-size: 1.1em;
-            text-transform: uppercase;
+    
+    .log{
+        grid-column: 1 / 2;
+        grid-row: 1/2;
+        a.btn.btn-ghost.text-xl {
+            background: url("pictures/logo_small.png") no-repeat  left / 40px 51px;
+            background-position: 0, 0;
+            min-height: inherit;
+            border: none;
+            padding-left: 48px;
         }
+        min-height: 76px;
+        
     }
 
+@media screen and (max-widh: 768px){
+/* NAVBAR */
+.navbar{
+    
+    .navbar-start{
+        grid-column: 1 /2 ;
+        grid-row: 1 / 2;
+    }
+    .navbar-center{
+     display: none;
+    }
+//     .dropdown{
+//         >div[role="button"]{
+//             display: inline-flex;
+//         }
+//     }
+    }
+}
 
 :root,
 [dark-theme]{
