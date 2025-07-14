@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router";
-import { RegisterFC } from '../Register';
+import { RegisterFC } from "src/pages/components/Register";
 
 const router_ = createBrowserRouter([
   {
@@ -12,6 +12,18 @@ const router_ = createBrowserRouter([
       <RegisterFC />
     )
   },
+  {
+    path: "/register",
+    element: (
+        <RegisterFC />
+    )
+  },
+  {
+    path: "/register/referral",
+    element: (
+        <RegisterFC />
+    )
+  }
   
 ],
   // {

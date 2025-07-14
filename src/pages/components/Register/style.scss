@@ -1,9 +1,15 @@
 section.form{
     width: inherit;
-    padding-top: 80px;
+    padding: 80px 0;
     text-align: center;
     grid-column: 1/2;
     grid-row: 2/3;
+    input{
+        border-radius: 10px;
+    }
+    h1{
+        color: var(--priority-dark-color);
+    }
 }
 
 .register_forrm a.btn.btn-ghost.text-xl {
@@ -72,5 +78,41 @@ section.form{
         font-size: 0.9em;
         text-align: left;
         padding-left: 11px;
+    }
+}
+
+/* PAGE OF REFERRAL CODE */
+.referral fieldset {
+    max-width: 448px;
+    width: 100%;
+}
+
+.referral{
+     p {
+        max-width: 398px;
+        display: block;
+        line-height: 1.2;
+        text-align: left;
+        font-size: 1.2em;
+    }
+    input{
+        max-width: 400px;
+        width: 100%;
+    }
+     label.label {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    p:first-of-type {
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    p:nth-of-type(2) {
+        text-align: center;
+
+        a{
+            color: var(--priority-dark-color);
+        }
     }
 }

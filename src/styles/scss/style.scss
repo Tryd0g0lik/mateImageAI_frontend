@@ -88,11 +88,11 @@ body{
   @extend %box-parrent;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 94px auto 200px;
+  grid-template-rows: 94px auto 260px;
   justify-content: space-evenly;
   margin: 0 auto;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 /* LOG / LOGOTIP */
