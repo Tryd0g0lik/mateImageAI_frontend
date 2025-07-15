@@ -63,7 +63,9 @@ select
 {
     background-color: var(--bg-dashboard-color );
 }
-
+label {
+    background: none 
+}
 a {
   @extend %font-basis;
   cursor: pointer;

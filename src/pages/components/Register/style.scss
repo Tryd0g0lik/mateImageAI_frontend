@@ -1,4 +1,4 @@
-section.form{
+main.form{
     width: inherit;
     padding: 80px 0;
     text-align: center;
@@ -55,8 +55,7 @@ section.form{
         border: 0;
         background-color: var(--priority-dark-color);
         color: var(--bg-dashboard-color);
-        min-height: 60px;
-        font-size: 1.7em;
+        
     }
 
 
@@ -72,6 +71,7 @@ section.form{
     input.checkbox {
         border: 1px solid var(--priority-dark-color);
         display: inline-block;
+        min-height: 15px;
     }
     input.checkbox:before {
         border: 0;

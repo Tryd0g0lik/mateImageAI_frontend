@@ -11,7 +11,7 @@ export function RegisterFC(): React.JSX.Element {
     return (
         <>
             <NavbarFC/>
-            <section className="form">
+            <main className="form">
                 { !pathName.includes("referral")? 
                     <div className="register_form">
                         {/* FORM FOR THE INIT OF REGISTRATION */}
@@ -67,7 +67,7 @@ export function RegisterFC(): React.JSX.Element {
 
                 }
                 
-            </section>
+            </main>
             <FooterFC/>
         </>
     );

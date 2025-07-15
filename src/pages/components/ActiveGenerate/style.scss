@@ -1,0 +1,180 @@
+main.active-generate {
+    padding: 50px 0;
+    padding-bottom: 100px;
+    article {
+        text-align: center;
+        padding: 25px 0;
+        display: block;
+        min-width: 280px;
+        width: 100%;
+        max-width: 510px;
+        border: 1px solid var(--basis-color-dark);
+        border-radius: 25px;
+        margin: 0 auto;
+        h1 {
+            color: var(--priority-lite-color);
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 3em;
+        }
+        p {
+            line-height: 1.2;
+            color: var(--basis-color-dark);
+        }   
+    }
+    .pictures{
+        display: block;
+        label {
+            background: none;display: inline-block;width: 80px;min-height: 60px;overflow: hidden;position: relative;
+            border: 2px solid var(--priority-dark-color);
+            border-radius: 15px;
+            background: url("pictures/pictures_file_load.png") no-repeat center;
+            background-size: 25px;
+        }
+        input.file-input {
+            display: none;
+            
+            min-height: inherit;
+            max-height: inherit;
+            width: 100%;
+            color: var(--bg-dashboard-color);
+        }
+        label.active{
+            overflow: initial;
+            width: 330px;
+            background-image: none; 
+            input{
+                display: inline-block;
+                width: inherit;
+            }
+        }
+        legend.fieldset-legend{
+            font-weight: 200;
+        }
+    }
+}
+.generate-progress.form fieldset {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    input[type="text"] {
+        border: 1px solid var(--priority-lite-color);
+        border-radius: 11px;
+        padding: 30px 12px 10px;
+        min-height: 80px;
+        max-height: 80px;
+        text-align: center;
+        padding-left: 20px;
+        width: 100%;
+        text-align: left;
+        letter-spacing: 0.3ch;
+    }
+    span {
+        display: inline;
+        position: absolute;
+        color: var(--basis-color-dark);
+        left: 20px;
+        top: 0;
+        z-index: 3;
+        font-size: 0.8em;
+        letter-spacing: 0.3ch;
+    }
+    >label {
+        position: relative;
+        display: flex;
+        max-width: calc(100% - 41.87%);
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .confirmation {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: calc(100% - (100% - 41.87%));
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+
+        label.label {
+            width: 100%;
+            max-width: 80px;
+            background-color: var(--priority-dark-color);
+            radius: 10px;
+            position: relative;
+
+            input.checkbox {
+                background-color: var(--priority-dark-color);
+                color: var(--bg-dashboard-color);
+                border-color: var(--basis-color-dark);
+                border-radius: 7px;
+            }
+        }
+        button,
+        label.label {
+            padding: 2px 15px;
+            border-radius: 10px;
+        }
+         button {
+            color: var(--bg-dashboard-color);
+            padding: 26px 15px;
+            border-radius: 10px;
+            min-width: 200px;
+            width: 100%;
+            max-width: calc(100% - 15%);
+            display: flex;
+        }
+        label.label:after {
+            content: "1:1";
+            color: var(--bg-dashboard-color);
+        }
+    }
+    input[type='text'],
+    input[type='checkbox'],
+    button{
+        margin-top: 0;
+    }
+}
+
+.generate-idea{
+    display: flex;
+    gap: 20px;
+    > div:first-of-type {
+        position: relative;
+        background-color: var(--priority-lite-color);
+        max-height: 880px;
+        min-height: 880px;
+        width: 100%;
+        max-width: calc(100% - (100% - 56.87%));
+        min-width: 280px;
+    }
+    > div:last-of-type{
+        > div{
+            width: 250px;
+            min-height: 250px;
+            border-radius: 20px;
+            background-color: rgb(144, 144, 144, 0.2)
+        }
+        >div:first-of-type{
+        border: 1px solid var(--priority-lite-color);
+        margin-bottom: 20px;
+        }
+    }
+}
+.generate-idea__getting:before{
+    content: "рисуем вашу идею...";
+    text-transform: uppercase;
+    font-size: 3em;
+    display: inline-block;
+    min-height: inherit;
+    width: 100%;
+    text-align: center;
+    padding-top: calc(50% - 94px);
+    color: var(--bg-dashboard-color);
+}
+
+

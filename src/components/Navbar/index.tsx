@@ -7,7 +7,7 @@ import { MenuFC } from "../Menu";
 
 export function NavbarFC(): React.JSX.Element{
 return (<>
-<div className="navbar bg-base-100 shadow-sm">
+<header className="navbar bg-base-100 shadow-sm">
     <MenuFC />
     <div className="navbar-end">
         <div className="login btn-group">
@@ -18,7 +18,7 @@ return (<>
         </div>
     </div>
 
-</div>
+</header>
 
 </>);
 };

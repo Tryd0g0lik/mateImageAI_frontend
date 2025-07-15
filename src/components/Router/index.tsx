@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { ActiveGenerateFC } from 'src/pages/components/ActiveGenerate';
 import { ProfileFC } from 'src/pages/components/Profile';
 import { RegisterFC } from "src/pages/components/Register";
 
@@ -10,7 +11,7 @@ const router_ = createBrowserRouter([
   {
     path: "/",
     element: (
-      <ProfileFC />
+      <ActiveGenerateFC />
     )
   },
   {
@@ -24,7 +25,13 @@ const router_ = createBrowserRouter([
     element: (
         <RegisterFC />
     )
-  }
+  },
+   {
+    path: "/profile",
+    element: (
+      <ProfileFC />
+    )
+  },
   
 ],
   // {
