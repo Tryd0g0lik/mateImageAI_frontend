@@ -1,0 +1,62 @@
+import React from "react";
+import "./style.scss";
+import { NavbarFC } from "src/components/Navbar";
+import { FooterFC } from "src/components/Footer";
+import { TarifFC } from "src/components/Tarif";
+export function PayFC(): React.JSX.Element {
+    return(
+    <section className="pay">
+                <NavbarFC/>
+                <section className="form">
+                    <div className="register_form">
+                        {/* FORM FOR THE INIT OF REGISTRATION */}
+                        <div className="log">
+                            <a className="btn btn-ghost text-xl">Metalmage<span>AI</span></a>
+                            <p>1 базовая генерация = <span>1</span> PXL</p>
+                            <p><span>1</span> PXL = <span>190</span>Т</p>
+                        </div>
+                        <div className="h">
+                            <h1>пополнение баланса</h1>
+                            <p>Выбирете подходящий тариф или настройте собственный</p>
+                        </div>
+                    </div> 
+                    <div className="tarifs">
+                        <div className="tarif_levels">
+                            <div className="level">
+                                <TarifFC levelTarif={""} pxl={0} currency={0} />
+                            </div>
+                            <div className="level">
+                                <TarifFC levelTarif={""} pxl={0} currency={0} />
+                                <button className="btn btn-neutral mt-4">+10 PXL бонус при покупке</button>
+                            </div>
+                            <div className="level">
+                                <TarifFC levelTarif={""} pxl={0} currency={0} />
+                                <button className="btn btn-neutral mt-4">+25 PXL бонус</button>
+                            </div>
+                            <div className="level">
+                                <TarifFC levelTarif={""} pxl={0} currency={0} />
+                                <button className="btn btn-neutral mt-4">+50 PXL бонус</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pay_form form">
+                        <label className="input">
+                            <input type="text" placeholder="Type here" className="input" />
+                        </label>
+                        <label className="input">
+                            <input type="number" className="input" />
+                        </label>
+                        <label className="input">
+                            <input type="email" className="input" />
+                        </label>
+                        <button className="btn btn-neutral mt-4">+50 PXL бонус</button>
+                        <label className="input">
+                            <input type="checkbox" className="input" checked/>
+                            <p>Я принимаю условия использования</p>
+                        </label>
+                    </div>
+                </section>
+                <FooterFC/>
+            </section>
+    )
+}
