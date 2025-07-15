@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -89,12 +89,10 @@ module.exports = {
         ],
 
       },
-      // {
-      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      //   type: 'asset/resource',
-
-        
-      // },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
 
@@ -104,7 +102,16 @@ module.exports = {
     // new ChunksWebpackPlugin(
     //   { generateChunksFiles: false }
     // ),
-   
+   new CopyPlugin({
+      patterns: [
+        {
+        from: "src/pictures/*.png",
+        to: "pictures/[name][ext]",
+        noErrorOnMissing: true, // Не завершать сборку, если файлов нет
+        force: true,            // Перезаписывать существующие файлы
+        },
+      ],
+    }),
     new BundleTracker({
       path: path.join(__dirname, 'dist/bundles'),
       filename: 'webpack-stats.json'
