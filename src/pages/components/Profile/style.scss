@@ -1,0 +1,101 @@
+.profile{
+    .form {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        button{
+            border: 1px solid var(--priority-dark-color);
+            border-radius: 10px;
+            background: none;
+            color: var(--priority-dark-color);
+            
+        }
+        .register_form{
+            width: 100%;
+            max-width: 550px;
+            min-width: auto;
+            margin: initial;
+            padding-top: 90px;
+            fieldset > label{
+                padding-bottom: 25px;
+            }
+        }
+        .balance{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            
+            input[type="text"]{
+                background: url("pictures/balance.svg") no-repeat left;
+                background-size: 20px;
+                min-width: 4ch;
+                padding: 0 50px;
+                box-sizing: content-box;                
+                background-position-x: 20px;
+                text-align: center;
+                color: var(--font-basis-color-lite);
+                font-size: 2em;
+            }
+            .register_form{
+                fieldset > label{
+                padding-bottom: initial;
+            }
+            }
+            label{
+                min-width: auto;
+                width: auto;
+                position: relative;
+            }
+            label:after{
+                content: "pxl";
+                text-transform: uppercase;
+                font-size: 0.7em;
+                position: absolute;
+                right: 14px;
+                font-weight: 100;
+                color: var(--font-basis-color-lite);
+
+            }
+            button{
+                background-color: var(--priority-lite-color);
+                color: #2f466a;
+                font-weight: 400;
+                min-height: 40px;
+            }
+
+        }
+        .balance_form {
+            padding: 50px 0;
+        }
+        div:last-of-type{
+            a{
+                color: var(--basis-color-dark);
+                display: inline-block;
+            }
+            a:first-of-type{
+                color:  var(--priority-dark-color);
+                padding-right: 20px;
+            }
+        }
+        fieldset.fieldset,
+        input {
+            max-width: 400px;
+            width: 100%;
+        }
+        button{
+            min-height: 60px;
+            font-size: 1.7em;
+        }
+
+        .generator{
+            display: inline-block;
+            width: 100px;
+            min-height: 100px;
+            max-height: 100px;
+            background: url("pictures/picturies_fone.png") no-repeat center;
+            background-size: 70px;
+            margin: 0 auto;
+        }
+    }
+    
+}

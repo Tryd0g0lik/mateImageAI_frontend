@@ -3,13 +3,14 @@
  */
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { ProfileFC } from 'src/pages/components/Profile';
 import { RegisterFC } from "src/pages/components/Register";
 
 const router_ = createBrowserRouter([
   {
     path: "/",
     element: (
-      <RegisterFC />
+      <ProfileFC />
     )
   },
   {

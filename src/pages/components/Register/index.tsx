@@ -10,10 +10,10 @@ export function RegisterFC(): React.JSX.Element {
     const pathName = window.location.pathname;
     return (
         <>
-            <NavbarFC></NavbarFC>
+            <NavbarFC/>
             <section className="form">
                 { !pathName.includes("referral")? 
-                    <div className="register_forrm">
+                    <div className="register_form">
                         {/* FORM FOR THE INIT OF REGISTRATION */}
                         <div className="log">
                             <a className="btn btn-ghost text-xl">Metalmage<span>AI</span></a>
@@ -47,7 +47,7 @@ export function RegisterFC(): React.JSX.Element {
                     </div> : 
                     
                     // FORM OF REFERRAL CODE, FROM ONE FIELD THE INPUT}
-                    <div className="register_forrm referral refer-code">
+                    <div className="register_form referral refer-code">
                     <div className="log">
                         <a className="btn btn-ghost text-xl">Metalmage<span>AI</span></a>
                     </div>

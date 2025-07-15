@@ -6,13 +6,15 @@ section.form{
     grid-row: 2/3;
     input{
         border-radius: 10px;
+        min-height: 60px;
+        max-height: 60px;
     }
     h1{
         color: var(--priority-dark-color);
     }
 }
 
-.register_forrm a.btn.btn-ghost.text-xl {
+.register_form a.btn.btn-ghost.text-xl {
     background: url("pictures/logo_small.png") no-repeat  center / 40px 51px;
     background-position: 0, 0;
     min-height: inherit;
@@ -20,7 +22,7 @@ section.form{
     padding-left: 48px;
 }
 
-.register_forrm {
+.register_form {
     display: inline-block;
     margin: 0 auto;
     min-width: 450px;
@@ -53,6 +55,8 @@ section.form{
         border: 0;
         background-color: var(--priority-dark-color);
         color: var(--bg-dashboard-color);
+        min-height: 60px;
+        font-size: 1.7em;
     }
 
 
