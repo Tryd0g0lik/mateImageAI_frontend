@@ -85,6 +85,7 @@ main.active-generate {
     >label {
         position: relative;
         display: flex;
+        min-width: 280px;
         max-width: calc(100% - 41.87%);
         width: 100%;
         flex-wrap: wrap;
@@ -94,6 +95,7 @@ main.active-generate {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
+        min-width: 572px;
         max-width: calc(100% - (100% - 41.87%));
         width: 100%;
         justify-content: flex-end;
@@ -147,7 +149,8 @@ main.active-generate {
         position: relative;
         background-color: var(--priority-lite-color);
         max-height: 880px;
-        min-height: 880px;
+        min-height: 280px;
+        aspect-ratio: 1 / 1;
         width: 100%;
         max-width: calc(100% - (100% - 56.87%));
         min-width: 280px;
@@ -155,7 +158,7 @@ main.active-generate {
     > div:last-of-type{
         > div{
             width: 250px;
-            min-height: 250px;
+            height: 250px;
             border-radius: 20px;
             background-color: rgb(144, 144, 144, 0.2)
         }
@@ -176,5 +179,68 @@ main.active-generate {
     padding-top: calc(50% - 94px);
     color: var(--bg-dashboard-color);
 }
+@media screen and (max-width: 1280px){
+    .generate-idea{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .generate-progress.form fieldset{
+        padding-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
 
+        .confirmation{
+            min-width: 280px;
+        }
+    }
+}
 
+@media screen and (max-width: 980px) {
+    .generate-idea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > div:nth-child(2){
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .generate-idea__getting:before{
+        content: "рисуем вашу идею...";
+        font-size: 2em;
+    }
+    .generate-idea{
+        > div:last-of-type{
+            > div{
+                width: 150px;
+                height: 150px;
+            }
+        }
+}
+}
+@media screen and (max-width: 420px){
+    
+    .generate-progress.form fieldset .confirmation {
+        display: grid;
+        grid-template-columns:61px / auto;
+        grid-template-rows:1fr;
+
+        label.label{
+            padding: 2px 8px;
+            grid-column: 1 / 2;
+        }
+        button{
+            grid-column: 2 / 3;
+        }
+    }
+    lable.lable{
+        max-width: none;    
+        width: 60px;
+    }
+}
