@@ -1,3 +1,6 @@
+/**
+ * src\pages\components\Pay\index.tsx
+ */
 import React from "react";
 import "./style.scss";
 import { NavbarFC } from "src/components/Navbar";
@@ -40,20 +43,6 @@ export function PayFC(): React.JSX.Element {
                         </div>
                     </div>
                     <div className="pay_form form">
-                        {/* <label className="input">
-                            <input type="text" placeholder="Type here" className="input" />
-                        </label>
-                        <label className="input">
-                            <input type="number" className="input" />
-                        </label>
-                        <label className="input">
-                            <input type="email" className="input" />
-                        </label>
-                        <button className="btn btn-neutral mt-4">+50 PXL бонус</button>
-                        <label className="input">
-                            <input type="checkbox" className="input" checked/>
-                            <p>Я принимаю условия использования</p>
-                        </label> */}
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                             <label className="label">
                                 <input type="text"  className="input" />

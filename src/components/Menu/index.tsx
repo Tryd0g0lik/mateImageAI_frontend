@@ -1,3 +1,6 @@
+/**
+ * src\components\Menu\index.tsx
+ */
 import React from "react";
 
 export function MenuFC(): React.JSX.Element {

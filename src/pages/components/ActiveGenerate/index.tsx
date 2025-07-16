@@ -1,3 +1,6 @@
+/**
+ * src\pages\components\ActiveGenerate\index.tsx
+ */
 import React from "react";
 import "./style.scss";
 import { NavbarFC } from "src/components/Navbar";

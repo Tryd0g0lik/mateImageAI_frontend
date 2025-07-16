@@ -1,3 +1,6 @@
+/**
+ * src\components\Tarif\index.tsx
+ */
 import React from 'react';
 import "./style.scss";
 type LevelType =  {
