@@ -1,0 +1,67 @@
+.pay{
+    > section {
+        text-align: center;
+    }
+    .register_form {
+        border: 0;
+        background: none;
+        padding-top: 50px;
+        a.btn.btn-ghost.text-xl {
+            background: none;
+            padding: 0;
+            font-size: 2.2em;
+            font-weight: 500;
+            display: block;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            line-height: 1.2ch;
+            span {
+                font-weight: 500;
+                line-height: 1.2;
+            }
+        }
+        p {
+            line-height: 1.2;
+            span {
+                line-height: 1.2;
+            }
+        }
+        p:last-of-type {
+            grid-row: 3 / 4;
+        }
+        p:first-of-type {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .log {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px 2ch 2ch;
+            background-color: rgba(144, 144, 144, 0.1);
+            border-radius: 15px;
+            border: 1px solid var(--basis-color-dark);
+            padding: 18px 0;
+        }
+        div.h {
+            text-align: center;
+            padding-top: 50px;
+            h1 {
+                text-transform: uppercase;
+                font-weight: 400;
+                color: var(--priority-dark-color);
+                line-height: 1;
+                p {
+                    line-height: 1.2;
+                    display: inline;
+                }
+            }
+        }
+    }
+    div.tarif_levels {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+    }
+}
+
+
