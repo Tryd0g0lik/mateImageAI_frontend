@@ -1,11 +1,11 @@
 .pay{
     > section {
         text-align: center;
+        padding: 50px 0;
     }
     .register_form {
         border: 0;
         background: none;
-        padding-top: 50px;
         a.btn.btn-ghost.text-xl {
             background: none;
             padding: 0;
@@ -61,7 +61,68 @@
         display: flex;
         align-content: flex-start;
         justify-content: center;
+        gap: 0.7%;
     }
 }
 
 
+.pay_form  {
+    label.label {
+        border-radius: 15px;
+        color: var(--basis-color-dark);
+        border: 0;
+        padding-bottom: 0;
+        position: relative;
+    }
+    label.label:before {
+        color: var(--basis-color-dark);
+        content: "Укажите сумму пополнения в евро (₸)";
+        position: absolute;
+        top: 7px;
+        left: 12px;
+        z-index: 1;
+        line-height: 1;
+        font-size: 0.8em;
+    }
+    label.label:nth-of-type(2):before {
+        content: "На ваш счет поступит (PXL)";
+    }
+    label.label:last-of-type:before {
+        content: "Введите ваш email для получения чека";
+    }
+    fieldset.fieldset {
+        min-width: 280px;
+        width: 100%;
+        max-width: 410px;
+    }
+    
+    input.input {
+        min-height: 55px;
+        min-width: 280px;
+        width: 100%;
+        border: 0;
+        
+    }
+}
+
+.pay_form.form input[type='checkbox']{
+        color: var(--priority-dark-color);
+        border-radius: 7px;
+    }
+.pay_form.form button{
+    color: #2f466a;
+    font-weight: 500;
+    max-height: 30px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 980px){
+    .pay {
+        .level{
+            padding-bottom: 8px;
+        }
+        div.tarif_levels {
+            flex-wrap: wrap;
+        }
+    }
+}

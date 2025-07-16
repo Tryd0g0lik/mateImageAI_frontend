@@ -40,7 +40,7 @@ export function PayFC(): React.JSX.Element {
                         </div>
                     </div>
                     <div className="pay_form form">
-                        <label className="input">
+                        {/* <label className="input">
                             <input type="text" placeholder="Type here" className="input" />
                         </label>
                         <label className="input">
@@ -53,10 +53,29 @@ export function PayFC(): React.JSX.Element {
                         <label className="input">
                             <input type="checkbox" className="input" checked/>
                             <p>Я принимаю условия использования</p>
-                        </label>
+                        </label> */}
+                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                            <label className="label">
+                                <input type="text"  className="input" />
+                            </label>
+                            <label className="label">
+                                <input type="text" className="input" />
+                            </label>
+
+                            <label className="label">
+                                <input type="email" className="input" />
+                            </label>
+
+                            <button className="btn btn-neutral mt-4">Оплатить</button>
+                            <div className="confirmation">
+                                <input type="checkbox" defaultChecked className="checkbox" />
+                                <a className="text-center">Я принимаю условия испольщования</a>
+                            </div>
+                            
+                        </fieldset>
                     </div>
                 </section>
                 <FooterFC/>
             </section>
-    )
+    );
 }
