@@ -12,9 +12,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
   cache: false, 
-  watch: true,
+//   watch: true,
   entry:
   {
     index: {

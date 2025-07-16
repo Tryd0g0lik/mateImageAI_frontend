@@ -116,11 +116,11 @@ module.exports = {
     '@stylistic/member-delimiter-style': ['error', {
       "multiline": {
         "delimiter": "comma",
-        "requireLast": false
+        "requireLast": true
       },
       "singleline": {
-        "delimiter": "comma",
-        "requireLast": false
+         "delimiter": "comma",
+         "requireLast": true
       }
     }],
     '@stylistic/semi': ['error', 'always', { omitLastInOneLineBlock: false }],

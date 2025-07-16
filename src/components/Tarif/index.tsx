@@ -3,10 +3,11 @@
  */
 import React from 'react';
 import "./style.scss";
-type LevelType =  {
+type LevelType = {
     "levelTarif": string
     "pxl": number
-    "currency": number };
+    "currency": number 
+};
 export function TarifFC(props: LevelType): React.JSX.Element {
     const {levelTarif} = props;
     return(
