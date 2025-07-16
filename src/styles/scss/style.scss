@@ -7,7 +7,7 @@ $max-width-size: 1600px;
 
 %box-parrent{
   min-height: 100vh;
-  display: inline-block;
+  display: block;
   min-width: 320px;
   max-width: $max-width-size;
   min-width: 320px;
@@ -93,12 +93,12 @@ button:active{
 }
 #root {
   @extend %box-parrent;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 94px auto 260px;
-  justify-content: space-evenly;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: 94px auto 260px;
+//   justify-content: space-evenly;
   margin: 0 auto;
-  flex-wrap: wrap;
+//   flex-wrap: wrap;
   padding: 20px;
 }
 
@@ -151,23 +151,37 @@ footer .navbar-center {
         min-height: 76px;
         
     }
-
-@media screen and (max-widh: 768px){
-/* NAVBAR */
-.navbar{
-    
+@media screen and (max-width: 1023.9999px){
+    .navbar{
+        display: flex;
+    }
     .navbar-start{
-        grid-column: 1 /2 ;
-        grid-row: 1 / 2;
+        display: initial;
+        min-width: 40px;
     }
-    .navbar-center{
-     display: none;
+    
+}
+
+@media screen and (max-width: 768px){
+    header{
+        justify-content: space-between;
+        
     }
-//     .dropdown{
-//         >div[role="button"]{
-//             display: inline-flex;
-//         }
-//     }
+    header,
+    .navbar div.navbar-center{
+            display: flex;
+        }
+    /* NAVBAR */
+    .navbar{
+    
+        .navbar-start{
+            grid-column: 1 /2 ;
+            grid-row: 1 / 2;
+        }
+    }
+    
+    div.navbar-center > div.log{
+        display: none;
     }
 }
 

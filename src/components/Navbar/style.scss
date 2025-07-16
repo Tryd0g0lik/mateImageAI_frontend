@@ -4,7 +4,7 @@
 
 /* NAVBAR */
 .navbar{
-    
+    justify-content: space-between;
     max-height: 90px;
     min-height: 90px;
     @extend %border-active;
@@ -25,7 +25,7 @@
         grid-row: 1/1;
         max-width: 275px;
         width: 100%;
-        min-width: 241px;
+        min-width: 220px;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
