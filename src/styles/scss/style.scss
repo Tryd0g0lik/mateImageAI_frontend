@@ -81,6 +81,9 @@ h1{
 h2{
     font-size: 1.57em;
 }
+h1, h2 {
+    text-align: center;
+}
 /* BODY */
 body{
   padding: 0;
@@ -114,7 +117,9 @@ button:active{
         text-transform: uppercase;
     }
 }
-
+.register_form .log{
+    text-align: center;
+}
 /* NAVBAR and FOOTER*/
 .navbar,
 footer{
@@ -184,7 +189,11 @@ footer .navbar-center {
         display: none;
     }
 }
-
+@media screen and (max-width: 620px){
+    #root{
+        padding: 0;
+    }
+}
 :root,
 [dark-theme]{
     --bg-body-color: #141414;

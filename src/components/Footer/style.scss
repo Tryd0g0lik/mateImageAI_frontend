@@ -207,7 +207,7 @@ section.footer__copiright{
         .footer__submenu{
             display: none;
         }
-        footer a {
+        a {
             line-height: 1.5;
             text-decoration: underline;
         }
@@ -217,8 +217,8 @@ section.footer__copiright{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows:  100px 110px 60px;
-        
         justify-items: end;
+        padding-right: 12px;
         > div:nth-child(1){
             grid-column: 1/2;
             grid-row: 1/2;
