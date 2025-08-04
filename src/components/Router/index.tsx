@@ -10,9 +10,9 @@ import { RegisterFC } from "src/pages/components/Register";
 
 const router_ = createBrowserRouter([
   {
-    path: "/",
+    path: "/register",
     element: (
-      <PayFC />
+        <RegisterFC />
     )
   },
   {
@@ -39,6 +39,12 @@ const router_ = createBrowserRouter([
       <ActiveGenerateFC />
     )
   },
+  {
+    path: "profile/deposit",
+    element: (
+      <PayFC />
+    )
+  }
   
 ],
   // {

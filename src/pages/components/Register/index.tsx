@@ -64,7 +64,7 @@ export function RegisterFC(): React.JSX.Element {
                         <button className="btn btn-neutral mt-4">Зарегистрироваться</button>
                     </fieldset>
                 </div>
-
+                
                 }
                 
             </main>
