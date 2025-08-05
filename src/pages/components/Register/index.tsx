@@ -5,11 +5,14 @@ import React from "react";
 import "./style.scss";
 import { NavbarFC } from "src/components/Navbar";
 import { FooterFC } from "src/components/Footer";
+import warnedMeaasege from "src/service/errorMessageForFields";
+import handlerFormReger from "./handlers/handlerForm";
 
 export function RegisterFC(): React.JSX.Element {
     const pathName = window.location.pathname;
     return (
         <>
+        <section onLoad={async ()=> await warnedMeaasege({"include":0})} className="profile">
             <NavbarFC/>
             <main className="form">
                 { !pathName.includes("referral")? 
@@ -22,18 +25,18 @@ export function RegisterFC(): React.JSX.Element {
                             <h1>Регистрация</h1>
                         </div>
                         
-                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+                        <fieldset onMouseDown={handlerFormReger} className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                             <label className="label"><span>Имя пользователя</span>
-                                <input type="text" className="input" placeholder="Имя пользователя<" />
+                                <input type="text" className="input" placeholder="Имя пользователя" />
                             </label>
                             <label className="label"><span>Email</span>
                                 <input type="email" className="input" placeholder="Email" />
                             </label>
 
-                            <label className="label"><span>Пароль</span>
+                            <label className="label">{/*<span>Пароль</span>*/}
                                 <input type="password" className="input" placeholder="Пароль" />
                             </label>
-                            <label className="label"><span>Подтвердите пароль</span>
+                            <label className="label">{/*<span>Подтвердите пароль</span> */}
                                 <input type="password" className="input" placeholder="Подтвердите пароль" />
                             </label>
 
@@ -69,6 +72,8 @@ export function RegisterFC(): React.JSX.Element {
                 
             </main>
             <FooterFC/>
+        </section>
+
         </>
     );
 };

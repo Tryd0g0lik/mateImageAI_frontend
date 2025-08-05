@@ -73,6 +73,8 @@ main.form{
         border: 1px solid var(--priority-dark-color);
         display: inline-block;
         min-height: 15px;
+        max-height: 15px;
+        max-width: 15px;
     }
     input.checkbox:before {
         border: 0;

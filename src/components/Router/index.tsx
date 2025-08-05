@@ -8,9 +8,10 @@ import { PayFC } from 'src/pages/components/Pay';
 import { ProfileFC } from 'src/pages/components/Profile';
 import { RegisterFC } from "src/pages/components/Register";
 
+// LINK FOR THE LOGIN , i can't  see. !!!!
 const router_ = createBrowserRouter([
   {
-    path: "/register",
+    path: "/",
     element: (
         <RegisterFC />
     )
@@ -40,7 +41,7 @@ const router_ = createBrowserRouter([
     )
   },
   {
-    path: "profile/deposit",
+    path: "/profile/deposit",
     element: (
       <PayFC />
     )

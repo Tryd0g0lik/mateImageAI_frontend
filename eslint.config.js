@@ -139,17 +139,22 @@ module.exports = {
 
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
-
+    
   // TypeScript - три разделителя между элементами в интерфейсах и псевдонимах типов
+  '@stylistic/member-delimiter-style':'off',
     '@stylistic/ts/member-delimiter-style': [
       'error', {
         multiline: {
           delimiter: 'none', // Options are ',' or ';'
           requireLast: false, // Last line
         },
+        singleline: {
+            delimiter: 'comma',
+            requireLast: false,
+          },
       },
     ],
-
+    
   defaultParamLast: 'off',
     '@typescript-eslint/default-param-last': 'error',
 

@@ -86,6 +86,9 @@ h2{
 h1, h2 {
     text-align: center;
 }
+#body span{
+    text-transform: math-auto;
+}
 /* BODY */
 body{
   padding: 0;
@@ -158,6 +161,34 @@ footer .navbar-center {
         min-height: 76px;
         
     }
+/* Data in form field is not correct*/
+label{
+    position: relative;
+}
+.warned-message{
+    display: none;
+    position: absolute;
+    max-width: 350px;
+    background-color: var(--warned-message);
+    padding: 0 5px;
+    border: 1px solid var(--priority-dark-color);
+    left: 0;
+    // bottom: -75px;
+    z-index: 3;
+
+}
+.active.warned-message{
+    display: inline-block;
+    width: 100%;
+    white-space: normal;
+    h3,
+    span {
+        line-height: 1.2;
+        display: inline-block;
+    }
+
+}
+/*---------------------------*/
 @media screen and (max-width: 1023.9999px){
     .navbar{
         display: flex;
@@ -206,5 +237,5 @@ footer .navbar-center {
     --priority-lite-color: #b5e3ff;
     --font-basis-color-lite: #ebf7ff;
     --basis-color-dark: #909090;
-
+    --warned-message:  rgb(240, 15, 45, 0.7);
 }
