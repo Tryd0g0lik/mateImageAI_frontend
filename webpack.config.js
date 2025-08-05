@@ -159,7 +159,7 @@ devServer: {
     compress: true,
     historyApiFallback: true,
     // open: true, // Автоматическое открытие браузера
-    port: 8000
+    port: 8080
   },
   resolve: {
     extensions: [".tsx", ".jsx", ".ts", ".js", ".svg"],

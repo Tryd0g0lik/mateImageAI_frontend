@@ -12,7 +12,7 @@ export function RegisterFC(): React.JSX.Element {
     const pathName = window.location.pathname;
     return (
         <>
-        <section onLoad={async ()=> await warnedMeaasege({"include":0})} className="profile">
+        <section onLoad={async () => await warnedMeaasege({"include":0}) } className="profile">
             <NavbarFC/>
             <main className="form">
                 { !pathName.includes("referral")? 
@@ -42,7 +42,7 @@ export function RegisterFC(): React.JSX.Element {
 
                             <button className="btn btn-neutral mt-4">Зарегистрироваться</button>
                             <div className="confirmation">
-                                <input type="checkbox" defaultChecked className="checkbox" />
+                                <input type="checkbox" defaultChecked value="Ok" className="checkbox" />
                                 <a className="text-center">Я принимаю условия условия и Политику конфеденциальности</a>
                             </div>
                             

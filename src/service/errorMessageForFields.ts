@@ -18,7 +18,7 @@ type Props = {
  * @param {number}include - number for include the html-box of warn-message. Default value is number 0 - serch/find end remove html-box from war-message.
  * @param {boolean} top - boolean for position of html-box of warn-message. Default value is false it means - bottom of html-container.
  */
-async function warnedMeaasege(props: Props): Promise<void> {
+async function warnedMeaasege(props: Props): Promise<boolean> {
     const{
         htmlContainer = undefined,
         message ="В поле данные не корректы.",
@@ -48,9 +48,9 @@ async function warnedMeaasege(props: Props): Promise<void> {
             );
         }
         htmlContainer?.insertAdjacentHTML("beforeend", messageError.outerHTML);
-        return;
+        return false;
     }
     document.querySelectorAll(".warned-message").forEach((item) => item.remove());
-    return;
+    return true;
 }
 export default warnedMeaasege;

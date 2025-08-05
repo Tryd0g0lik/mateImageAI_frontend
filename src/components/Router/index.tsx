@@ -10,41 +10,29 @@ import { RegisterFC } from "src/pages/components/Register";
 
 // LINK FOR THE LOGIN , i can't  see. !!!!
 const router_ = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-        <RegisterFC />
-    )
-  },
+//   {
+//     path: "/",
+//     element: <RegisterFC />
+//   },
   {
     path: "/register",
-    element: (
-        <RegisterFC />
-    )
+    element: <RegisterFC />
   },
   {
     path: "/register/referral",
-    element: (
-        <RegisterFC />
-    )
+    element: <RegisterFC />
   },
    {
     path: "/profile",
-    element: (
-      <ProfileFC />
-    )
+    element: <ProfileFC />
   },
   {
     path: "/profile/generate",
-    element: (
-      <ActiveGenerateFC />
-    )
+    element: <ActiveGenerateFC />
   },
   {
     path: "/profile/deposit",
-    element: (
-      <PayFC />
-    )
+    element: <PayFC />
   }
   
 ],
