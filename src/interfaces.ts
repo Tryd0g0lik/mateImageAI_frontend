@@ -16,7 +16,6 @@ export enum APIPerson {
     API__POST_GET_USERS_BY_ID = "/",
 }
 
-
 export type BasisData = {
     username: string,
     password: string,
