@@ -47,9 +47,21 @@ Frontend веб-приложения с интеграцией ChatGPT API, си
 ## Форма регистрации
 Поля имеют [валидатороты](./src/pages/validators).
 1) Вначале, все поля проверяютя "А есть ли вообще данные в поле". 
-2) Если поля имеют данные, каждое поле отдельно проверяется на соответствие шаблонам (rege).
+2) После, каждое поле отдельно проверяется на соответствие шаблонам (rege-вырожениям).
 
 Каждое поле, в случае не соответствия, получаем сообщение.\
 ![valid_fields](./img/valid_fields.png)
 
 Note: Сообщение о несоответствии данных проподает при повторном нажатии на  знопку "Зарегистрироваться".
+Все проверки на валидность запускаются разом и основной поток не ожидает выполнение проверок на валидность.
+```ts
+Promise.allSettled([
+            async_regex_validate_of_username((inputUserName as HTMLInputElement).value),
+            async_regex_validate_of_email((inputEmail as HTMLInputElement).value),
+            async_regex_validate_of_password((inputPassword as HTMLInputElement).value),
+            async_regex_validate_of_password((inputPasswordDuplicate as HTMLInputElement).value),
+            (async () => ((inputPassword as HTMLInputElement).value === (inputPasswordDuplicate as HTMLInputElement).value) ? true : false)(),
+            (async () => (InputCheckbox as HTMLInputElement) && (InputCheckbox as HTMLInputElement).checked ? true : false)()
+        ]).then((response)=>{})
+```
+Валидные данные, в качестве data-form, [отправляся на сервер](src/pages/components/Register/handlers/handlerForm.ts) в "`POST-request`".

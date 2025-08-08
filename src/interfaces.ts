@@ -13,7 +13,7 @@ export enum APIPerson {
     API__POST_LOGOUT = "/",
     API__POST_GET_USER = "/",
     API__POST_GET_USERS = "/",
-    API__POST_GET_USERS_BY_ID = "/",
+    API__POST_GET_USERS_BY_ID = "/"
 }
 
 export type BasisData = {
