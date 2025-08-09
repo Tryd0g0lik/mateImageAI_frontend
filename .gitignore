@@ -270,6 +270,7 @@ pyrightconfig.json
 arhive
 archive
 dist
+**/redux-toolkit.modern.mjs
 node_modules
 **/node_modules
 logs_server.txt

@@ -3,7 +3,7 @@ import async_regex_validate_of_username from "src/pages/validators/validate_user
 import async_regex_validate_of_email from "src/pages/validators/validate_email";
 import warnedMeaasege from "src/service/errorMessageForFields";
 import { handlerApiRegisterPOST } from "./handler_api";
-import { BasisData, HandlerApiProps } from "src/interfaces";
+import { BasisData,  HandlerApiProps } from "@interfeces";
 import {APIPerson, APP_URL} from "src/interfaces";
 
 /**
@@ -15,7 +15,6 @@ import {APIPerson, APP_URL} from "src/interfaces";
  * @returns 
  */
 const handlerFormReger = async (event: React.MouseEvent): Promise<boolean> => {
-    
     if (!(
         (event.target as HTMLElement).tagName.toLowerCase() === "button")
     ){

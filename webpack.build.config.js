@@ -68,6 +68,7 @@ module.exports = {
           },
         ],
         exclude: [
+          path.resolve(__dirname,"**/dist"),
           path.resolve(__dirname, "node_modules"),
           path.resolve(__dirname, "dist"),
         ]
@@ -99,9 +100,6 @@ module.exports = {
   plugins: [
     new Dotenv(),
     new CleanWebpackPlugin(), 
-    // new ChunksWebpackPlugin(
-    //   { generateChunksFiles: false }
-    // ),
    new CopyPlugin({
       patterns: [
         {
@@ -122,10 +120,6 @@ module.exports = {
       include: path.resolve(__dirname, '../bundles'),
       columns: true
     }),
-    // new HtmlWebpackPlugin({
-    //   template: 'src/public/index.html',
-    //   filename: "../templates/index.html"
-    // }),
 
     new ESLintPlugin({
       files: path.resolve(__dirname, 'src/'),

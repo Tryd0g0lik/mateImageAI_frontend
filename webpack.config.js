@@ -68,8 +68,9 @@ module.exports = {
           },
         ],
         exclude: [
-          path.resolve(__dirname, "node_modules"),
-          path.resolve(__dirname, "dist"),
+            path.resolve(__dirname,"**/dist"),
+            path.resolve(__dirname, "node_modules"),
+            path.resolve(__dirname, "dist"),
         ]
 
       },
@@ -137,9 +138,10 @@ module.exports = {
   ],
   watchOptions: {
     ignored: [
-      "node_modules",
-      "**/node_modules",
-      "dist"
+        "node_modules",
+        "*/node_modules",
+        "dist",
+        
     ]
   },
 devServer: {
@@ -149,7 +151,7 @@ devServer: {
     },
 
     watchFiles: [
-      'src',
+      './src',
 
     ],
   
@@ -168,8 +170,8 @@ devServer: {
       path.resolve(__dirname, "node_modules"),
     ],
     alias: {
-      // "media/catalog": path.resolve(__dirname, "src/media/catalog"),
-      // "fonts": path.resolve(__dirname, "src/fonts"),
+      "@interfeces": path.resolve(__dirname, "src/interfaces.ts"),
+      "reduxToolkit": path.resolve(__dirname, "src/reduxs"),
       "pictures": path.resolve(__dirname, "src/pictures"),
     },
     

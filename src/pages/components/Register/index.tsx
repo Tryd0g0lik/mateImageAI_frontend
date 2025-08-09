@@ -7,22 +7,23 @@ import { NavbarFC } from "src/components/Navbar";
 import { FooterFC } from "src/components/Footer";
 import warnedMeaasege from "src/service/errorMessageForFields";
 import handlerFormReger from "./handlers/handlerForm";
+import { PageMeta } from "@interfeces";
 
-export function RegisterFC(): React.JSX.Element {
-    const pathName = window.location.pathname;
+export function RegisterFC(props: PageMeta): React.JSX.Element {
+    const {page}  = props;
     return (
         <>
         <section onLoad={async () => await warnedMeaasege({"include":0}) } className="profile">
             <NavbarFC/>
             <main className="form">
-                { !pathName.includes("referral")? 
+                {!page.pathName.includes("referral")? 
                     <div className="register_form">
                         {/* FORM FOR THE INIT OF REGISTRATION */}
                         <div className="log">
                             <a className="btn btn-ghost text-xl">Metalmage<span>AI</span></a>
                         </div>
                         <div className="h">
-                            <h1>Регистрация</h1>
+                            <h1>{page.title}</h1>
                         </div>
                         
                         <fieldset onMouseDown={handlerFormReger} className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">

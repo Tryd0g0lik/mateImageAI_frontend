@@ -11,11 +11,7 @@
  */
 import {createSlice} from "@reduxjs/toolkit";
 import type {PayloadAction } from "@reduxjs/toolkit";
-import { DataForDAPI,  UserStatus } from "src/interfaces";
-
-interface StatePerson extends DataForDAPI {
-    "status": string
-}
+import { StatePerson,  UserStatus } from "@interfeces";
 
 const clearState: StatePerson = {
     "email": "",
@@ -42,7 +38,7 @@ if (lsPerson) {
  * @initialState {initialState} initialState
  */
 const personSlice = createSlice({
-    name:"userstate",
+    name:"personstate",
     initialState,
     reducers:{
         resetPerson: () => {

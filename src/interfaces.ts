@@ -6,7 +6,16 @@ const APP_PORT  = process.env.APP_PORT || "8000";
 const APP_PROTOCOL = process.env.HTTP || "http";
 
 export const APP_URL = !APP_PORT ? `${APP_PROTOCOL}://${APP_HOST}` : `${APP_PROTOCOL}://${APP_HOST}:${APP_PORT}`;
+ /* COMMON */
+ export interface PageMeta {
+    page: {
+        title: string,
+        description: string,
+        keywords: Array<string>,
+        pathName: string,
+    }
 
+ }
 export enum TokenKeys {
     TOKEN_ACCESS_KEY = "access_token",
     TOKEN_REFRESH_KEY = "refresh_token",
@@ -30,6 +39,10 @@ export enum UserStatus {
   STATUS_USER = "USER",
   STATUS_SUPER_ADMIN = "SUPER_ADMIN",
   STATUS_ANONYMOUSUSER = "ANONYMOUSUSER"
+}
+
+export interface StatePerson extends DataForDAPI {
+    "status": string
 }
 
 /*** Person, it's basis proparties for User */
