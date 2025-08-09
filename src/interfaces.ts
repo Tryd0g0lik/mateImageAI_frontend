@@ -30,20 +30,6 @@ export enum APIPerson {
     API__POST_GET_USERS = "/",
     API__POST_GET_USERS_BY_ID = "/"
 }
-/* NEW TYPE REDUX */
-/**
- * This is intarface for User.status
- */
-export enum UserStatus {
-  STATUS_ADMIN = "ADMIN",
-  STATUS_USER = "USER",
-  STATUS_SUPER_ADMIN = "SUPER_ADMIN",
-  STATUS_ANONYMOUSUSER = "ANONYMOUSUSER"
-}
-
-export interface StatePerson extends DataForDAPI {
-    "status": string
-}
 
 /*** Person, it's basis proparties for User */
 export type BasisData = {
@@ -70,4 +56,19 @@ export type HandlerApiProps = {
         body:FormData
     }
 
+}
+
+/* NEW TYPE REDUX */
+/**
+ * This is intarface for User.status
+ */
+export enum UserStatus {
+  STATUS_ADMIN = "ADMIN",
+  STATUS_USER = "USER",
+  STATUS_SUPER_ADMIN = "SUPER_ADMIN",
+  STATUS_ANONYMOUSUSER = "ANONYMOUSUSER"
+}
+
+export interface StatePerson extends DataForDAPI {
+    "status": string
 }

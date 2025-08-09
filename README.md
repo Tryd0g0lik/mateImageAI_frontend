@@ -44,6 +44,112 @@ Frontend веб-приложения с интеграцией ChatGPT API, си
 - **Стили**: CSS-фреймворк Tailwind, SCSS;
 - **Адаптивность**: Мобильная, планшет, ноутбук  и десктопная версии
 
+### Redux.metapage
+Свойства/meta страницы.
+```ts
+// src\reduxs\store.ts
+const pageSlice = createSlice({
+    name: "metapage",
+    initialState: clearPageState,
+    reducers: {
+        resetPageMeta: () => clearPageState,
+        setCurrentMeta: (state, action: PayloadAction<PageMeta>) => {
+            /**
+             * state.page.title = action.payload.page.title;
+             * state.page.description = action.payload.page.description;
+             * state.page.keywords = action.payload.page.keywords;
+             * ....
+             */
+            state = action.payload;
+            return {...state};
+        },
+    },
+});
+```
+```ts
+// src\interfaces.ts
+ export interface PageMeta {
+    page: {
+        title: string,
+        description: string,
+        keywords: Array<string>,
+        pathName: string,
+    }
+
+ }
+```
+Свойства страницы передаются через redux. Создана прослушка которая получает данные/свойства страницы и передаёт.
+```ts
+//src\components\Router\index.tsx
+export const MetaListener = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const pathname =  window.location.pathname.toLowerCase().trim();
+    const pageName =
+      pathname.includes("register") ? "Регистрация" :
+      pathname.includes("login") ? "Авторизуйтесь" :
+      pathname.includes("profile") ? "Профиль" :
+      pathname.includes("/profile/deposit") ? "Депозит" :
+      pathname.includes("generate") ? "Генерация" :
+      pathname.includes("/register/referral") ? "Реферальная ссылка" : "Главная";
+
+    const state: PageMeta = {
+      page: {
+        title: pageName,
+        pathName: pathname,
+        description: "",
+        keywords: [],
+      },
+    };
+
+    dispatch(setCurrentMeta(state));
+  }, [location.pathname, dispatch]);
+
+  return null;
+};
+```
+## Redux
+![redux](./img/redux.png)
+
+### Redux.personstate
+Свойства пользователя/персоны
+```ts
+// src\reduxs\features\userstate\personSlice.ts
+const personSlice = createSlice({
+    name:"personstate",
+    initialState,
+    reducers:{
+        resetPerson: () => {
+            localStorage.removeItem("person");
+        return clearState;
+        },
+        setPerson:(state, action: PayloadAction<StatePerson>) => {
+            state = action.payload;
+            return {...state};
+        },
+    },
+});
+
+```
+```ts
+// src\interfaces.ts
+
+export enum UserStatus {
+  STATUS_ADMIN = "ADMIN",
+  STATUS_USER = "USER",
+  STATUS_SUPER_ADMIN = "SUPER_ADMIN",
+  STATUS_ANONYMOUSUSER = "ANONYMOUSUSER"
+}
+// BasisData 
+// DataForDAPI
+export interface StatePerson extends DataForDAPI {
+    "status": string
+}
+```
+Пользователь имеет два рабочих статуса. Это клиент "`USER`" страницы и аноним "`ANONYMOUSUSER`".
+
+
 ## Форма регистрации
 Поля имеют [валидатороты](./src/pages/validators).
 1) Вначале, все поля проверяютя "А есть ли вообще данные в поле". 

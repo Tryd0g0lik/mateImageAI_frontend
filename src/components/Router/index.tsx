@@ -42,11 +42,9 @@ const router_ = (pageMeta: PageMeta) => createBrowserRouter([
 ],
 );
 export const MetaListener = () => {
-//   const location = useLocation();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // const pathname = location.pathname.toLowerCase().trim();
     const pathname =  window.location.pathname.toLowerCase().trim();
     const pageName =
       pathname.includes("register") ? "Регистрация" :
