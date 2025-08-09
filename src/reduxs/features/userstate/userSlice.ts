@@ -1,3 +1,14 @@
+/**
+ * src\reduxs\features\userstate\userSlice.ts
+ * 
+ * Here, we have the regulate of the user state/status. 
+ * Generally, the user's state can has  for of states. It's:
+ *   STATUS_ADMIN = "ADMIN",
+ *   STATUS_USER = "USER",
+ *   STATUS_SUPER_ADMIN = "SUPER_ADMIN",
+ *   STATUS_ANONYMOUSUSER = "ANONYMOUSUSER" 
+ * In now time as a working only two states. It's "USER" and "ANONYMOUSUSER".
+ */
 import {createSlice} from "@reduxjs/toolkit";
 import type {PayloadAction } from "@reduxjs/toolkit";
 import { DataForDAPI,  UserStatus } from "src/interfaces";
@@ -14,10 +25,9 @@ const clearState: StatePerson = {
 };
 
 /* CHECKR Local Storage
-Return false or json's strrin from data of person.
+Return false or json's strrin from data of 'person'.
 */
-
-const lsPerson = localStorage.getItem("person"); /** Check the local storage, return 'null' or 'b_person' */
+const lsPerson = localStorage.getItem("person"); 
 
 export let initialState: typeof clearState | object = clearState;
 
@@ -27,10 +37,11 @@ if (lsPerson) {
 }; 
 
 /**
+ * https://redux-toolkit.js.org/api/createSlice
  * Here, we working with a statse of the user.
  * @initialState {initialState} initialState
  */
-const userSlice = createSlice({
+const personSlice = createSlice({
     name:"userstate",
     initialState,
     reducers:{
@@ -45,5 +56,5 @@ const userSlice = createSlice({
     },
 });
 
-export const {setPerson, resetPerson} = userSlice.actions;
-export default userSlice.reducer;
+export const {setPerson, resetPerson} = personSlice.actions;
+export default personSlice.reducer;

@@ -22,8 +22,14 @@
     
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {  
-      "pictures/*": [
+    "paths": {
+        "@interfeces":[
+            "./src/interfaces.ts",
+        ],
+        "reduxToolkit/*":[
+            "./src/reduxs/*",
+        ],
+        "pictures/*": [
         "src/pictures",
       ],
     }

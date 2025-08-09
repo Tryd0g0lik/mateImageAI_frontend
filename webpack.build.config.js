@@ -144,8 +144,8 @@ module.exports = {
       path.resolve(__dirname, "node_modules"),
     ],
     alias: {
-      // "media/catalog": path.resolve(__dirname, "src/media/catalog"),
-      // "fonts": path.resolve(__dirname, "src/fonts"),
+      "@interfeces": path.resolve(__dirname, "src/interfaces.ts"),
+      "reduxToolkit": path.resolve(__dirname, "src/reduxs"),
       "pictures": path.resolve(__dirname, "src/pictures"),
     },
     

@@ -281,3 +281,5 @@ package-lock.json
 !./.editorconfig
 !./.gitignore
 !./.husky/
+
+src/service/cookies
